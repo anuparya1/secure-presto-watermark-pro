@@ -22,9 +22,13 @@ final class Loader {
 	 */
 	public static function init(): void {
 
+		// Load Admin Module
 		require_once SPWP_PLUGIN_DIR . 'includes/class-admin.php';
-
 		new Admin();
+
+		// Load Settings Module
+		require_once SPWP_PLUGIN_DIR . 'includes/class-settings.php';
+		new Settings();
 
 	}
 }
