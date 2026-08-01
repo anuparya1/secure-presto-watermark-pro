@@ -16,18 +16,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class Loader {
 
 	/**
-	 * Plugin boot.
+	 * Initialize plugin modules.
 	 *
 	 * @return void
 	 */
 	public static function init(): void {
 
-		// Future:
-		// Admin
-		// Settings
-		// Watermark
-		// LearnPress
-		// Presto Player
-	}
+		require_once SPWP_PLUGIN_DIR . 'includes/class-admin.php';
 
+		new Admin();
+
+	}
 }
