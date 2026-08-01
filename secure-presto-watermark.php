@@ -3,7 +3,7 @@
  * Plugin Name: Secure Presto Watermark Pro
  * Plugin URI: https://github.com/anuparya1/secure-presto-watermark-pro
  * Description: Dynamic watermark protection for Presto Player with LearnPress and Eduma support.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Anup Kumar
  * Author URI: https://github.com/anuparya1
  * License: MIT
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin Constants
  */
-define( 'SPWP_VERSION', '1.0.0' );
+define( 'SPWP_VERSION', '1.0.1' );
 define( 'SPWP_PLUGIN_FILE', __FILE__ );
 define( 'SPWP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SPWP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
