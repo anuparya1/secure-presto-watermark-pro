@@ -30,5 +30,9 @@ final class Loader {
 		require_once SPWP_PLUGIN_DIR . 'includes/class-settings.php';
 		new Settings();
 
+		// Load Watermark Engine
+		require_once SPWP_PLUGIN_DIR . 'includes/class-watermark.php';
+		new Watermark();
+
 	}
 }
