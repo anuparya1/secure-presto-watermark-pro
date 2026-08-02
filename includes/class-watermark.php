@@ -25,6 +25,11 @@ final class Watermark {
 			array( $this, 'enqueue_assets' )
 		);
 
+		add_action(
+			'wp_footer',
+			array( $this, 'render_watermark' )
+		);
+
 	}
 
 	/**
@@ -50,6 +55,23 @@ final class Watermark {
 			SPWP_VERSION,
 			true
 		);
+
+	}
+
+	/**
+	 * Render Watermark
+	 */
+	public function render_watermark(): void {
+
+		if ( is_admin() ) {
+			return;
+		}
+
+		$user = wp_get_current_user();
+
+		$name = $user->exists() ? $user->display_name : 'Guest User';
+
+		echo '<div id="spwp-watermark">' . esc_html( $name ) . '</div>';
 
 	}
 
