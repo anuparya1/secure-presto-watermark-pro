@@ -27,7 +27,8 @@ final class Watermark {
 
 		add_action(
 			'wp_footer',
-			array( $this, 'render_watermark' )
+			array( $this, 'render_watermark' ),
+			999
 		);
 
 	}
@@ -69,10 +70,18 @@ final class Watermark {
 
 		$user = wp_get_current_user();
 
-		$name = $user->exists() ? $user->display_name : 'Guest User';
+		$text = 'Guest User';
 
-		echo '<div id="spwp-watermark">' . esc_html( $name ) . '</div>';
+		if ( $user && $user->exists() ) {
+			$text = $user->display_name;
+		}
 
+		?>
+
+		<div id="spwp-watermark">
+			<?php echo esc_html( $text ); ?>
+		</div>
+
+		<?php
 	}
-
 }
