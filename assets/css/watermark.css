@@ -1,1 +1,27 @@
-/* Secure Presto Watermark */
+#spwp-watermark{
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+z-index:999999;
+
+background:rgba(0,0,0,.6);
+
+color:#fff;
+
+padding:10px 16px;
+
+border-radius:8px;
+
+font-size:14px;
+
+font-weight:bold;
+
+pointer-events:none;
+
+opacity:.8;
+
+}
